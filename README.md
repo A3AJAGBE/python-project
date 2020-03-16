@@ -5,4 +5,4 @@ Project Idea: Drug Information Systems
 
 Member
 Aminat Ajagbe (10541380)
-Krishna (1054052)
+Krishna Dumpala (10540452)
