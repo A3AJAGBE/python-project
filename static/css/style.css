@@ -1,0 +1,71 @@
+/* GENERAL STYLE FOR THE WEBSITE */
+* {
+  -moz-box-sizing: border-box; /* Firexfox */
+  -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box; /* IE */
+}
+
+body {
+	background: #8478E2;
+  font-family: 'Roboto Mono', monospace, Helvetica;
+  color: #3F4145;
+}
+
+h1 {
+font-family: 'Abril Fatface', cursive;
+}
+
+h2, h3 {
+  font-family: 'Fira Code';
+}
+
+.clearfix {
+  clear: both;
+}
+
+/* MAIN SECTION STYLE */
+main {
+  position: relative;
+  margin: 50px auto;
+  width: 90%;
+  height: 700px;
+  background: white;
+  border-radius: 10px;
+}
+
+
+/* HEADER SECTION STYLE */
+header{
+  padding: 5px 20px;
+  border-bottom: 1px solid #A8A4C9
+}
+
+
+/* CONTENT SECTION STYLE */
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+/* FOOTER SECTION STYLE */
+footer {
+  padding: 10px 20px;
+  border-top: 1px solid #A8A4C9;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+footer span {
+  float: right;
+}
+
+footer span a{
+  text-decoration: none;
+  cursor: pointer;
+  color: #8478E2;
+}
