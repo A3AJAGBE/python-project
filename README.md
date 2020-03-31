@@ -16,5 +16,8 @@ Sai - Documentation
 
 Aminat - System Development 
 
-Krishna - Information Gathering for database and documentation 
+Krishna - Information Gathering for database and documentation
 
+Information Gathering Status: Details of drugs collected.
+
+Next Step : Start making Database
