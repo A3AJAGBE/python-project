@@ -27,9 +27,9 @@ h2, h3 {
 /* MAIN SECTION STYLE */
 main {
   position: relative;
-  margin: 50px auto;
-  width: 90%;
-  height: 700px;
+  margin: 30px auto;
+  width: 95%;
+  height: 90vh;
   background: white;
   border-radius: 10px;
 }
@@ -48,6 +48,7 @@ header{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 90%;
   text-align: center;
 }
 
@@ -104,4 +105,17 @@ footer span a{
   text-decoration: none;
   cursor: pointer;
   color: #8478E2;
+}
+
+/* TABLET / DESKTOP STYLE */
+@media screen and (min-width: 768px) {
+
+  main {
+    margin: 50px auto;
+    width: 90%;
+  }
+
+  .content {
+    width: 60%;
+  }
 }
