@@ -11,9 +11,21 @@ link = mysql.connector.connect(**config)
 
 mycursor = link.cursor()
 
+"""
+#test creating a database
+
+mycursor.execute("CREATE DATABASE testS")
+
+"""
+
+"""
+#Showing all database
+
 mycursor.execute("SHOW DATABASES")
 
 for x in mycursor:
   print(x)
-  
+"""
+mycursor.execute("CREATE DATABASE DrugSystem")
+
 link.close()
