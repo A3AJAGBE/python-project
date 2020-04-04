@@ -1,0 +1,99 @@
+/* GENERAL STYLE FOR THE WEBSITE */
+* {
+  -moz-box-sizing: border-box; /* Firexfox */
+  -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box; /* IE */
+}
+
+body {
+	background: #DAE0EA;
+  font-family: 'Roboto Mono', monospace, Helvetica;
+}
+
+h1 {
+  font-family: 'Abril Fatface', cursive;
+  color: #7A7C87;
+  font-size: 2.2em;
+  margin: 0;
+}
+
+h2, h3 {
+  font-family: 'Fira Code';
+}
+
+.clearfix {
+  clear: both;
+}
+
+
+/* HEADER SECTION STYLE */
+header{
+  padding: 10px 20px;
+  background: #F6F8FA;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.search {
+  float: right;
+  padding: 8px;
+  margin-right: 16px;
+  font-size: 1.3em;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.search input[type=text]{
+  height: 40px;
+  color: #3F4145;
+  padding: 10px;
+  width: 30vw;
+}
+
+button {
+  background: #8478E2;
+  color: #3F4145;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  padding: 7px;
+}
+/* ASIDE SECTION STYLE */
+aside {
+  margin-top: 60px;
+  background: #F6F8FA;
+  width: 25vw;
+  height: 100vh;
+  float: left;
+}
+
+aside a {
+  display: block;
+  background: #8478E2;
+  color: black;
+  padding: 16px;
+  font-size: 1.3em;
+  text-decoration: none;
+  border-top: 2px solid #3F4145;
+}
+
+aside a.active {
+  background-color: #F6F8FA;
+  color: #8478E2;
+}
+
+aside a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+
+/* DASHBOARD SECTION STYLE */
+.dashboard {
+  margin-top: 70px;
+  width: 75vw;
+  float: right;
+  padding-left: 15px;
+}
