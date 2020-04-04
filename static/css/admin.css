@@ -7,18 +7,24 @@
 
 body {
 	background: #DAE0EA;
+  color: #7A7C87;
   font-family: 'Roboto Mono', monospace, Helvetica;
 }
 
 h1 {
   font-family: 'Abril Fatface', cursive;
-  color: #7A7C87;
   font-size: 2.2em;
   margin: 0;
 }
 
 h2, h3 {
   font-family: 'Fira Code';
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.black {
+  color: black;
 }
 
 .clearfix {
@@ -38,7 +44,7 @@ header{
 .search {
   float: right;
   padding: 8px;
-  margin-right: 16px;
+  margin-right: 15px;
   font-size: 1.3em;
   position: absolute;
   top: 0;
@@ -52,14 +58,16 @@ header{
   width: 30vw;
 }
 
-button {
+.search button {
   background: #8478E2;
   color: #3F4145;
   height: 40px;
   width: 40px;
   cursor: pointer;
   padding: 7px;
+  border: none;
 }
+
 /* ASIDE SECTION STYLE */
 aside {
   margin-top: 60px;
@@ -67,6 +75,8 @@ aside {
   width: 25vw;
   height: 100vh;
   float: left;
+  border-top: 2px solid #3F4145;
+  position: fixed;
 }
 
 aside a {
@@ -76,7 +86,7 @@ aside a {
   padding: 16px;
   font-size: 1.3em;
   text-decoration: none;
-  border-top: 2px solid #3F4145;
+  border-bottom: 2px solid #3F4145;
 }
 
 aside a.active {
@@ -96,4 +106,79 @@ aside a:hover:not(.active) {
   width: 75vw;
   float: right;
   padding-left: 15px;
+}
+
+/* SECTION STYLE FOR loginMain class IN admin_main.html */
+.loginMain {
+  position: relative;
+  margin: 150px auto;
+  width: 50vw;
+  height: 60vh;
+  background: #8478E2;
+  color: white;
+  border-radius: 20px;
+}
+
+.login {
+  position: absolute;
+  margin: 20px;
+  float: left;
+}
+
+.login input[type=text], input[type=email], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #F6F8FA;
+}
+
+.login input[type=text]:focus,input[type=email]:focus, input[type=password]:focus {
+  outline: none;
+}
+
+hr {
+  border: 1px solid #F6F8FA;
+  margin-bottom: 25px;
+}
+
+.login button {
+  background: #3F4145;
+  color: #8478E2;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.5;
+}
+
+button:hover {
+  opacity:1;
+}
+
+p a{
+  text-decoration: none;
+  cursor: pointer;
+  color: #3F4145;
+}
+
+/* FOOTER SECTION STYLE */
+footer{
+  padding: 10px 20px;
+  background: #F6F8FA;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer span {
+  float: right;
+}
+
+footer span a{
+  text-decoration: none;
+  cursor: pointer;
+  color: #8478E2;
 }
