@@ -19,26 +19,25 @@
         </header>
 
         <main class="loginMain">
-          <form class="login" action="#" method="post">
+          <form id="contact" class="login" action=" " method="POST" autocomplete="off">
 
             <h2>Contact Us</h2>
             <hr>
 
             <label for="name">Name: </label>
-            <input type="text" name="name" required>
+            <input type="text" name="name" value="{{request.form.name}}">
 
             <label for="username">Username: </label>
-            <input type="text" name="username" required>
+            <input type="text" name="username" value="{{request.form.username}}">
 
             <label for="email">Email: </label>
-            <input type="email" name="email" required>
+            <input type="email" name="email" value="{{request.form.email}}">
 
             <p>Fill this form only if you are requesting login access, Thank you <br>
             If you have access, <a href="{{ url_for('admin_main') }}">Login</a></p>
 
-            <div class="clearfix">
-              <button type="submit" name="submit">SUBMIT</button>
-            </div>
+              <button type="submit">SUBMIT</button>
+          
           </form>
 
         </main>
@@ -48,7 +47,9 @@
             <h3>DrugInfoSys @ 2020. <span><a href="{{ url_for('contact') }}">Contact Us</a></span></h3>
           </footer>
 
-
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+          <script src="/static/script.js" charset="utf-8"></script>
 
   </body>
 </html>

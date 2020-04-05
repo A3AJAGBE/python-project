@@ -33,16 +33,16 @@
           <aside id="nav">
             <a class="nav" href="{{ url_for('dashboard') }}">Home</a>
             <a class="nav active" href="{{ url_for('admin_register') }}">Provide Access</a>
-            <a class="nav" href="#news">Notification</a>
-            <a class="nav" href="#contact">Pharma</a>
-            <a class="nav" href="#about">Drug</a>
+            <a class="nav" href="#">Notification</a>
+            <a class="nav" href="#">Pharma</a>
+            <a class="nav" href="#">Drug</a>
+            <a class="nav" href="{{ url_for('logout') }}">Logout</a>
           </aside> <!-- END ASIDE -->
 
           <section class="dashboard">
             <h2>DASHBOARD: Welcome, Administrator</h2>
 
-
-              <form id="reg" class="login" action=" " method="post">
+              <form id="reg" class="login" action=" " method="POST" autocomplete="off">
 
                 <h2>Register Form</h2>
                 <hr>
@@ -60,10 +60,10 @@
                 <input type="password" name="con_password" value="{{request.form.con_password}}">
 
                 <p>This form is to provide login access to new Administrators </p>
+                <h4 class="black">{{ output }}</h4>
 
                 <div class="clearfix">
-                  <button type="submit" name="submit">REGISTER</button>
-
+                  <button type="submit">REGISTER</button>
                 </div>
               </form>
 

@@ -33,15 +33,25 @@
           <aside id="nav">
             <a class="nav active" href="{{ url_for('dashboard') }}">Home</a>
             <a class="nav" href="{{ url_for('admin_register') }}">Provide Access</a>
-            <a class="nav" href="#news">Notification</a>
-            <a class="nav" href="#contact">Pharma</a>
-            <a class="nav" href="#about">Drug</a>
+            <a class="nav" href="#">Notification</a>
+            <a class="nav" href="#">Pharma</a>
+            <a class="nav" href="#">Drug</a>
+            <a class="nav" href="{{ url_for('logout') }}">Logout</a>
           </aside> <!-- END ASIDE -->
 
           <section class="dashboard">
-            <h2>DASHBOARD: Welcome, Administrator</h2>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <h2>DASHBOARD: Welcome, {{ username }}!</h2>
+            <hr>
+            <p class="black">
+              <h3>Things you can do from this page</h3>
+              <ul>
+                <li>Register new Administrator for login access</li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+
+            </p>
           </section>
 
         </main> <!-- END OF MAIN SECTION -->
