@@ -31,7 +31,7 @@
 
           <!-- ASIDE -->
           <aside id="nav">
-            <a class="nav" href="{{ url_for('home') }}">Home</a>
+            <a class="nav" href="{{ url_for('dashboard') }}">Home</a>
             <a class="nav active" href="{{ url_for('admin_register') }}">Provide Access</a>
             <a class="nav" href="#news">Notification</a>
             <a class="nav" href="#contact">Pharma</a>
@@ -42,35 +42,36 @@
             <h2>DASHBOARD: Welcome, Administrator</h2>
 
 
-              <form class="login" action="#" method="post">
+              <form id="reg" class="login" action=" " method="post">
 
                 <h2>Register Form</h2>
                 <hr>
 
                 <label for="name">Name: </label>
-                <input type="text" name="name" required>
-                
+                <input type="text" name="name" value="{{request.form.name}}">
+
                 <label for="username">Username: </label>
-                <input type="text" name="username" required>
+                <input type="text" name="username" value="{{request.form.username}}">
 
                 <label for="password">Password: </label>
-                <input type="password" name="password" required>
+                <input type="password" name="password" value="{{request.form.password}}">
 
                 <label for="con_password">Confirm Password: </label>
-                <input type="password" name="con_password" required>
+                <input type="password" name="con_password" value="{{request.form.con_password}}">
 
                 <p>This form is to provide login access to new Administrators </p>
 
                 <div class="clearfix">
-                  <button type="submit" class="login">REGISTER</button>
+                  <button type="submit" name="submit">REGISTER</button>
+
                 </div>
               </form>
-
 
           </section>
 
         </main> <!-- END OF MAIN SECTION -->
-
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
       <script src="/static/script.js" charset="utf-8"></script>
   </body>
 </html>
