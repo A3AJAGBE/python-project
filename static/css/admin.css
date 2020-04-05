@@ -66,6 +66,7 @@ header{
   cursor: pointer;
   padding: 7px;
   border: none;
+  float: right;
 }
 
 /* ASIDE SECTION STYLE */
@@ -124,11 +125,15 @@ aside a:hover:not(.active) {
   margin: 20px;
   float: left;
 }
+.login label {
+  display: inline-block;
+  width: 100%;
+}
 
 .login input[type=text], input[type=email], input[type=password] {
   width: 100%;
   padding: 15px;
-  margin: 5px 0 22px 0;
+  margin: 5px 0 20px 0;
   display: inline-block;
   border: none;
   background: #F6F8FA;
@@ -163,6 +168,12 @@ p a{
   cursor: pointer;
   color: #3F4145;
 }
+
+.error {
+  color: red;
+  margin-bottom: 15px;
+}
+
 
 /* FOOTER SECTION STYLE */
 footer{
