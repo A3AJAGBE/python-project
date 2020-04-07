@@ -25,3 +25,16 @@ the medicines which are available in the market today.
 There may be situations where a person may not be able to visit a Doctor for drug consultation for many reasons
 for e.g. the person may not have time to visit due to his/her tight schedule, didn't get a doctor's appointment
 etc.
+
+By sitting at home our users can search for any drug which is present in the market and can learn about it. 
+No formal knowledge is required for the user while using our system.Our project has a very simple UI for the 
+purpose of user friendliness of the page. The data which is present in  the database is provided by the many 
+pharma companies who actually manufacture those medicines. We take utmost care not to fill inappropriate data 
+into the database.
+
+Inside the database we can not only add or delete data/ information but can also create admin accounts where 
+an admin can be a representative of a pharma company who provides details to our project.Such admins have few 
+rights and cannot access full database. We as project managers have full rights and we can add or remove users 
+as per request.
+
+
