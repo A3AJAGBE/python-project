@@ -37,4 +37,24 @@ an admin can be a representative of a pharma company who provides details to our
 rights and cannot access full database. We as project managers have full rights and we can add or remove users 
 as per request.
 
+Objective of project.
+The main objective behind our project is to store and manage information about medicines, user accounts. 
+The project is built at administrative end level thus only the admins of the system have the rights to 
+change / modify the data. The purpose of the project is to give users a handy system which will help /serve them 
+access knowledge about medicinal drugs any time / on the go. The best part is the user does not need to have extra
+knowledge about the system on how to use it, it is a user friendly system.
+
+Functionalities.
+-Project provides a searching facility where a user can search through various medicines using Drug name ,
+Manufacturer name or can even search through symptoms.
+-Manages the information provided by pharma companies.
+-Displays the user’s queired medicine uses including side effects.
+-Manages user , admin information.
+-Editing,adding , updating and deleting of data made easier.
+-User friendly, easy to interact with the system.
+
+
+
+ 
+
 
