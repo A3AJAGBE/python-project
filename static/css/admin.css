@@ -116,9 +116,9 @@ aside a:hover:not(.active) {
 /* SECTION STYLE FOR loginMain class IN admin_main.html */
 .loginMain {
   position: relative;
-  margin: 150px auto;
+  margin: 100px auto;
   width: 50vw;
-  height: 60vh;
+  height: 77vh;
   background: #8478E2;
   color: white;
   border-radius: 20px;
