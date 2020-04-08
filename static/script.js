@@ -1,19 +1,4 @@
 
-// Get aside
-var asideNav = document.getElementById("nav");
-
-// Get all <a class="nav"> inside aside
-var menu = asideNav.getElementsByClassName("nav");
-
-// Loop through the link and add the active class to the current/clicked link
-for (var i = 0; i < menu.length; i++) {
-  menu[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
-
 // validation for Administrator Registration
 $(document).ready(function() {
   $("#reg").validate({
@@ -26,6 +11,10 @@ $(document).ready(function() {
         required: true,
         minlength: 7,
         maxlength: 15
+      },
+      email: {
+      required: true,
+      email: true
       },
       password: {
         required: true,
@@ -48,6 +37,9 @@ $(document).ready(function() {
         minlength: 'Username must be at least 7 characters',
         maxlength: 'Username must not be above 15 characters'
       },
+      email: {
+        required: 'Enter your email'
+      },
       password: {
         required: 'Enter your password',
         minlength: 'Password must be at least 8 characters'
@@ -63,71 +55,20 @@ $(document).ready(function() {
     }
   });
 
-  // validation for Administrator Login
-  $("#log").validate({
-    rules: {
-      username: {
-        required: true,
-        minlength: 7,
-        maxlength: 15
-      },
-      password: {
-        required: true,
-        minlength: 8
-      }
-    },
-    messages: {
-
-      username: {
-        required: 'Enter your username',
-        minlength: 'Username must be at least 7 characters',
-        maxlength: 'Username must not be above 15 characters'
-      },
-      password: {
-        required: 'Enter your password',
-        minlength: 'Password must be at least 8 characters'
-      }
-    },
-    submitHandler: function(form) {
-      form.submit();
-    }
-  });
-
-  // validation for Administrator login access
-  $("#contact").validate({
-    rules: {
-      name: {
-        required: true,
-        minlength: 4
-      },
-      username: {
-        required: true,
-        minlength: 7,
-        maxlength: 15
-      },
-      email: {
-      required: true,
-      email: true,
-      }
-
-    },
-    messages: {
-      name: {
-        required: 'Enter your name',
-        minlength: 'Name must be at least 4 characters'
-      },
-      username: {
-        required: 'Enter your username',
-        minlength: 'Username must be at least 7 characters',
-        maxlength: 'Username must not be above 15 characters'
-      },
-      email: {
-        required: 'Enter your email'
-      }
-    },
-    submitHandler: function(form) {
-      form.submit();
-    }
-  });
-
 });
+
+//Script to change active menu according to the menu 
+// Get aside
+var asideNav = document.getElementById("nav");
+
+// Get all <a class="nav"> inside aside
+var menu = asideNav.getElementsByClassName("nav");
+
+// Loop through the link and add the active class to the current/clicked link
+for (var i = 0; i < menu.length; i++) {
+  menu[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
