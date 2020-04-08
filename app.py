@@ -90,25 +90,27 @@ def contact():
 """ This is to display the admin register page of the website """
 @app.route('/admin_register', methods=['GET', 'POST'])
 def admin_register():
-    output = ' '
-    if request.method == 'POST':
-        name = request.form['name']
-        username = request.form['username']
-        password = hashlib.sha256(str(request.form['password']).encode('utf-8')).hexdigest()
-        con_password = hashlib.sha256(str(request.form['con_password']).encode('utf-8')).hexdigest()
+    if 'loggedin' in session:
+        output = ' '
+        if request.method == 'POST':
+            name = request.form['name']
+            username = request.form['username']
+            password = hashlib.sha256(str(request.form['password']).encode('utf-8')).hexdigest()
+            con_password = hashlib.sha256(str(request.form['con_password']).encode('utf-8')).hexdigest()
 
-        #mysql query
-        mycursor = link.cursor()
-        mycursor.execute('SELECT username FROM Administrators WHERE username = %s', (username,))
-        usernameCheck = mycursor.fetchone()
+            #mysql query
+            mycursor = link.cursor()
+            mycursor.execute('SELECT username FROM Administrators WHERE username = %s', (username,))
+            usernameCheck = mycursor.fetchone()
 
-        if usernameCheck:
-            output = 'Account already exists!'
-        else:
-            mycursor.execute('INSERT INTO Administrators (Name, Username, Password, confirmPassword) VALUES (%s, %s, %s, %s)', (name, username, password, con_password) )
-            link.commit()
-            output = 'Administrator successfully created'
-    return render_template('admin_register.html', output = output)
+            if usernameCheck:
+                output = 'Account already exists!'
+            else:
+                mycursor.execute('INSERT INTO Administrators (Name, Username, Password, confirmPassword) VALUES (%s, %s, %s, %s)', (name, username, password, con_password) )
+                link.commit()
+                output = 'Administrator successfully created'
+        return render_template('admin_register.html', output = output, username=session['username'])
+    return redirect(url_for('admin_main'))
 
 @app.route('/logout')
 def logout():
