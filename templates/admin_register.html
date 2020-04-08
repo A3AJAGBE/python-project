@@ -31,12 +31,12 @@
 
           <!-- ASIDE -->
           <aside id="nav">
-            <a class="nav" href="{{ url_for('dashboard') }}">Home</a>
-            <a class="nav active" href="{{ url_for('admin_register') }}">Provide Access</a>
-            <a class="nav" href="#">Notification</a>
-            <a class="nav" href="#">Pharma</a>
-            <a class="nav" href="#">Drug</a>
-            <a class="nav" href="{{ url_for('logout') }}">Logout</a>
+            <a class="nav" href="{{ url_for('dashboard') }}"><i class="fas fa-home"></i>  Home</a>
+            <a class="nav active" href="{{ url_for('admin_register') }}"><i class="fas fa-user-cog"></i> Provide Access</a>
+            <a class="nav" href="#"><i class="fas fa-bell"></i> Notification</a>
+            <a class="nav" href="#"><i class="fas fa-notes-medical"></i> Pharma</a>
+            <a class="nav" href="#"><i class="fas fa-capsules"></i>  Drug</a>
+            <a class="nav" href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i> Logout</a>
           </aside> <!-- END ASIDE -->
 
           <section class="dashboard">
@@ -47,16 +47,16 @@
                 <h2>Register Form</h2>
                 <hr>
 
-                <label for="name">Name: </label>
+                <label for="name"><i class="fas fa-user black"></i> Name: </label>
                 <input type="text" name="name" value="{{request.form.name}}">
 
-                <label for="username">Username: </label>
+                <label for="username"><i class="fas fa-user black"></i> Username: </label>
                 <input type="text" name="username" value="{{request.form.username}}">
 
-                <label for="password">Password: </label>
+                <label for="password"><i class="fas fa-lock black"></i> Password: </label>
                 <input type="password" name="password" value="{{request.form.password}}">
 
-                <label for="con_password">Confirm Password: </label>
+                <label for="con_password"><i class="fas fa-lock black"></i> Confirm Password: </label>
                 <input type="password" name="con_password" value="{{request.form.con_password}}">
 
                 <p>This form is to provide login access to new Administrators </p>
