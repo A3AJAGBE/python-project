@@ -21,11 +21,15 @@ config = {
 
 link = mysql.connector.connect(**config)
 
+
+""" This is the start of User route """
 #This is to display the users home page of the website.
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def home():
     return render_template('index.html')
 
+
+""" This is the start of Administrator route """
 #This is to display the dashboard page of the website.
 @app.route('/dashboard', methods=['GET', 'POST'])
 def dashboard():
@@ -87,7 +91,7 @@ def contact():
             output = 'Request sent successfully and email will be sent soon'
     return render_template('contact.html', output = output)
 
-""" This is to display the admin register page of the website """
+#This is to display the admin register page of the website
 @app.route('/admin_register', methods=['GET', 'POST'])
 def admin_register():
     if 'loggedin' in session:
@@ -119,6 +123,75 @@ def logout():
    session.pop('username', None)
    # Redirect to login page
    return redirect(url_for('admin_main'))
+
+
+""" This is the start of Pharma route  """
+@app.route('/pharma_login', methods=['GET', 'POST'])
+def pharma_login():
+
+    output = ' '
+    if request.method == 'POST':
+        name = request.form['name']
+        password = hashlib.sha256(str(request.form['password']).encode('utf-8')).hexdigest()
+
+        #mysql query
+        mycursor = link.cursor()
+        mycursor.execute('SELECT name, password FROM Pharmaceuticals WHERE name = %s AND password = %s', (name, password))
+        nameCheck = mycursor.fetchone()
+
+        # check if company name and password is in the database
+        if nameCheck:
+            # Create session data
+            session['loggedin'] = True
+            session['name'] = name
+
+            # Redirect to dashboard page
+            return redirect(url_for('pharma_dashboard'))
+        else:
+            # Administrator doesnt exist or username/password is incorrect
+            output = 'Incorrect login information, Try again'
+    return render_template('pharma_login.html', output = output)
+
+
+@app.route('/pharma_reg', methods=['GET', 'POST'])
+def pharma_reg():
+
+    output = ' '
+    if request.method == 'POST':
+        name = request.form['name']
+        location = request.form['location']
+        password = hashlib.sha256(str(request.form['password']).encode('utf-8')).hexdigest()
+        con_password = hashlib.sha256(str(request.form['con_password']).encode('utf-8')).hexdigest()
+
+        #mysql query
+        mycursor = link.cursor()
+        mycursor.execute('SELECT name FROM Pharmaceuticals WHERE name = %s', (name,))
+        nameCheck = mycursor.fetchone()
+
+        if nameCheck:
+            output = 'Account already exists!'
+        else:
+            mycursor.execute('INSERT INTO Pharmaceuticals (Name, Location, Password, confirmPassword) VALUES (%s, %s, %s, %s)', (name, location, password, con_password) )
+            link.commit()
+            output = 'Account successfully created, Go back login page'
+    return render_template('pharma_reg.html', output = output)
+
+@app.route('/pharma_dashboard', methods=['GET', 'POST'])
+def pharma_dashboard():
+    # verify if the Pharmaceutical Company is logged in
+    if 'loggedin' in session:
+        # redirect Pharmaceutical Company to dashboard
+        return render_template('pharma_dashboard.html', name=session['name'])
+    # if not redirect to the login page
+    return redirect(url_for('pharma_login'))
+
+@app.route('/pharma_logout')
+def pharma_logout():
+    # Remove session data, this will log the user out
+   session.pop('loggedin', None)
+   session.pop('name', None)
+   # Redirect to login page
+   return redirect(url_for('pharma_login'))
 
 if __name__ == '__main__':
     app.run()
