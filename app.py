@@ -185,6 +185,33 @@ def pharma_dashboard():
     # if not redirect to the login page
     return redirect(url_for('pharma_login'))
 
+@app.route('/pharma_profile', methods=['GET', 'POST'])
+def pharma_profile():
+    # verify if the Pharmaceutical Company is logged in
+    if 'loggedin' in session:
+        # redirect Pharmaceutical Company to dashboard
+        return render_template('pharma_profile.html', name=session['name'])
+    # if not redirect to the login page
+    return redirect(url_for('pharma_login'))
+
+@app.route('/add_drug', methods=['GET', 'POST'])
+def add_drug():
+    # verify if the Pharmaceutical Company is logged in
+    if 'loggedin' in session:
+        # redirect Pharmaceutical Company to dashboard
+        return render_template('add_drug.html', name=session['name'])
+    # if not redirect to the login page
+    return redirect(url_for('pharma_login'))
+
+@app.route('/pharma_view_drug', methods=['GET', 'POST'])
+def pharma_view_drug():
+    # verify if the Pharmaceutical Company is logged in
+    if 'loggedin' in session:
+        # redirect Pharmaceutical Company to dashboard
+        return render_template('pharma_view_drug.html', name=session['name'])
+    # if not redirect to the login page
+    return redirect(url_for('pharma_login'))
+
 @app.route('/pharma_logout')
 def pharma_logout():
     # Remove session data, this will log the user out
