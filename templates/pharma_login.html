@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Pharma: DrugInfoSys</title>
+    <meta name="description" content="Drug Information System, drugs, information system">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" href="/static/css/admin.css">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Fira+Code:500|Roboto+Mono&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/65a82e1708.js"></script>
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
+  </head>
+  <body>
+
+        <!-- HEADER SECTION -->
+        <header>
+          <h1><img src="/static/images/favicon32.png" alt="logo"> DrugInfoSys: Pharmaceutical Company</h1>
+        </header>
+
+        <main class="loginMain">
+            <form id="reg" class="login" action=" " method="POST" autocomplete="off">
+
+              <h2>Login Form</h2>
+              <hr>
+
+              <label for="name"><i class="fas fa-clinic-medical black"></i> Company Name: </label>
+              <input type="text" name="name" value="{{request.form.name}}">
+
+              <label for="password"><i class="fas fa-lock black"></i> Password: </label>
+              <input type="password" name="password" value="{{request.form.password}}">
+
+              <p>If you don't have an account, <a href="{{ url_for('pharma_reg') }}">Register</a> </p>
+              <h4 class="black">{{ output }}</h4>
+
+                <button type="submit">LOGIN</button>
+
+            </form>
+
+          </main>
+
+          <!-- FOOTER SECTION -->
+          <footer>
+            <h3>DrugInfoSys @ 2020. </h3>
+          </footer>
+
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+          <script src="/static/script.js" charset="utf-8"></script>
+  </body>
+</html>
