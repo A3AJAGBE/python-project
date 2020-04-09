@@ -16,6 +16,9 @@ $(document).ready(function() {
       required: true,
       email: true
       },
+      location: {
+      required: true
+      },
       password: {
         required: true,
         minlength: 8
@@ -40,6 +43,9 @@ $(document).ready(function() {
       email: {
         required: 'Enter your email'
       },
+      location: {
+        required: 'Where is the company located'
+      },
       password: {
         required: 'Enter your password',
         minlength: 'Password must be at least 8 characters'
@@ -57,7 +63,7 @@ $(document).ready(function() {
 
 });
 
-//Script to change active menu according to the menu 
+//Script to change active menu according to the menu
 // Get aside
 var asideNav = document.getElementById("nav");
 
