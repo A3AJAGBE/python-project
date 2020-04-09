@@ -9,6 +9,7 @@ body {
 	background: #DAE0EA;
   color: #7A7C87;
   font-family: 'Roboto Mono', monospace, Helvetica;
+  font-size: 1.1em;
 }
 
 h1 {
@@ -17,14 +18,24 @@ h1 {
   margin: 0;
 }
 
-h2, h3 {
+h2{
+  font-family: 'Fira Code';
+  font-size: 1.8em;
+  margin: 0;
+}
+h3 {
   font-family: 'Fira Code';
   font-size: 1.5em;
   margin: 0;
 }
 
+p {
+  margin: 0;
+}
+
 h4 {
-  font-size: 1.2em;
+  font-size: 1.3em;
+  margin: 0;
 }
 
 .black {
@@ -116,9 +127,9 @@ aside a:hover:not(.active) {
 /* SECTION STYLE FOR loginMain class IN admin_main.html */
 .loginMain {
   position: relative;
-  margin: 100px auto;
+  margin: 80px auto;
   width: 50vw;
-  height: 77vh;
+  height: 80vh;
   background: #8478E2;
   color: white;
   border-radius: 20px;
@@ -175,7 +186,7 @@ p a{
 
 .error {
   color: black;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 
