@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>DrugInfoSys: Pharma Company</title>
+  <meta name="description" content="Drug Information System, drugs, information system">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/css/normalize.css">
+  <link rel="stylesheet" href="/static/css/admin.css">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Fira+Code:500|Roboto+Mono&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/65a82e1708.js"></script>
+  <link rel="shortcut icon" href="/static/images/favicon.ico">
+</head>
+
+<body>
+
+  <!-- HEADER SECTION -->
+  <header>
+
+    <h1><img src="/static/images/favicon32.png" alt="logo"> DrugInfoSys: Pharmaceutical Company</h1>
+
+    <form class="search" action="#">
+      <input type="text" name="search" placeholder="Search query" />
+      <button type="button"><i class="fas fa-search"></i></button>
+    </form>
+
+  </header> <!-- END OF HEADER SECTION -->
+
+  <div class="class=" clearfix""></div>
+
+  <!-- MAIN SECTION -->
+  <main>
+
+    <!-- ASIDE -->
+    <aside id="nav">
+      <a class="nav" href="{{ url_for('pharma_dashboard') }}"><i class="fas fa-home"></i> Home</a>
+      <a class="nav" href="{{ url_for('pharma_profile') }}"><i class="fas fa-clinic-medical black"></i> Profile</a>
+      <a class="nav active" href="{{ url_for('add_drug') }}"><i class="fas fa-capsules"></i> Add Drug</a>
+      <a class="nav" href="{{ url_for('pharma_view_drug') }}"><i class="fas fa-capsules"></i> View Drugs</a>
+      <a class="nav" href="{{ url_for('pharma_logout') }}"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </aside> <!-- END ASIDE -->
+
+    <section class="dashboard">
+      <h2>DASHBOARD: Welcome, {{ name }}</h2>
+      <hr>
+      <div class="black">
+        <h3>Add Drug made by your company</h3>
+
+
+      </div>
+    </section>
+
+  </main> <!-- END OF MAIN SECTION -->
+
+  <!-- SCRIPTS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+  <script src="/static/script.js" charset="utf-8"></script>
+</body>
+
+</html>
