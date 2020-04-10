@@ -53,6 +53,14 @@ Manufacturer name or can even search through symptoms.
 -Editing,adding , updating and deleting of data made easier.
 -User friendly, easy to interact with the system.
 
+FEATURES of FLASK:
+built-in development server and fast debugger.
+integrated support for unit testing.
+RESTful request dispatching.
+Jinja2 templating.
+support for secure cookies (client side sessions)
+WSGI 1.0 compliant.
+Unicode based
 
 
  
