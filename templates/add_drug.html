@@ -34,9 +34,9 @@
 
     <!-- ASIDE -->
     <aside id="nav">
-      <a class="nav" href="{{ url_for('pharma_dashboard') }}"><i class="fas fa-home"></i> Home</a>
+      <a class="nav active" href="{{ url_for('pharma_dashboard') }}"><i class="fas fa-home"></i> Home</a>
       <a class="nav" href="{{ url_for('pharma_profile') }}"><i class="fas fa-clinic-medical black"></i> Profile</a>
-      <a class="nav active" href="{{ url_for('add_drug') }}"><i class="fas fa-capsules"></i> Add Drug</a>
+      <a class="nav" href="{{ url_for('add_drug') }}"><i class="fas fa-capsules"></i> Add Drug</a>
       <a class="nav" href="{{ url_for('pharma_view_drug') }}"><i class="fas fa-capsules"></i> View Drugs</a>
       <a class="nav" href="{{ url_for('pharma_logout') }}"><i class="fas fa-sign-out-alt"></i> Logout</a>
     </aside> <!-- END ASIDE -->
@@ -45,7 +45,27 @@
       <h2>DASHBOARD: Welcome, {{ name }}</h2>
       <hr>
       <div class="black">
-        <h3>Add Drug made by your company</h3>
+
+        <form id="reg" class="login" action=" " method="POST" autocomplete="off">
+
+          <h3>Add Drug made by your company</h3>
+          <hr>
+
+          <label for="drug_name"><i class="fas fa-pills black"></i> Drug Name: </label>
+          <input type="text" name="drug_name" value="{{request.form.drug_name}}">
+
+          <label for="uses"><i class="fas fa-diagnoses black"></i> Uses: </label>
+          <input type="text" name="uses" value="{{request.form.uses}}">
+
+          <label for="side_effect"><i class="fas fa-notes-medical black"></i> Side Effect: </label>
+          <textarea name="side_effect" rows="3" value="{{request.form.side_effect}}"></textarea>
+
+          <h4 class="black">{{ output }}</h4>
+
+          <div class="clearfix">
+            <button type="submit">ADD DRUG</button>
+          </div>
+        </form>
 
 
       </div>
