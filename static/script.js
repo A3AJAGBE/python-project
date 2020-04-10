@@ -1,5 +1,5 @@
 
-// validation for Administrator Registration
+// validation for forms in both admin and Pharmaceutical
 $(document).ready(function() {
   $("#reg").validate({
     rules: {
@@ -13,11 +13,20 @@ $(document).ready(function() {
         maxlength: 15
       },
       email: {
-      required: true,
-      email: true
+        required: true,
+        email: true
       },
       location: {
-      required: true
+        required: true
+      },
+      drug_name: {
+        required: true
+      },
+      uses: {
+        required: true
+      },
+      side_effect: {
+        required: true
       },
       password: {
         required: true,
@@ -45,6 +54,15 @@ $(document).ready(function() {
       },
       location: {
         required: 'Where is the company located'
+      },
+      drug_name: {
+        required: 'Enter the name of the drug'
+      },
+      uses: {
+        required: 'Enter the uses of the drug'
+      },
+      side_effect: {
+        required: 'Enter the side effect(s) of the drug'
       },
       password: {
         required: 'Enter your password',
