@@ -198,8 +198,29 @@ def pharma_profile():
 def add_drug():
     # verify if the Pharmaceutical Company is logged in
     if 'loggedin' in session:
+
+        output = ' '
+        if request.method == 'POST':
+            drug_name = request.form['drug_name']
+            uses = request.form['uses']
+            side_effect = request.form['side_effect']
+
+            #mysql query
+            mycursor = link.cursor()
+            mycursor.execute('SELECT Name FROM Drugs WHERE Name = %s', (drug_name,))
+            drug_nameCheck = mycursor.fetchone()
+
+            if drug_nameCheck:
+                output = 'Drug already exists!'
+            else:
+                mycursor.execute('INSERT INTO Drugs (Name, Uses, SideEffect, P_Id) VALUES (%s, %s, %s, (SELECT P_Id FROM Pharmaceuticals WHERE Name= %s))', (drug_name, uses, side_effect, session["name"]) )
+                link.commit()
+                output = 'Drug added successfully!!!'
+
+
+
         # redirect Pharmaceutical Company to dashboard
-        return render_template('add_drug.html', name=session['name'])
+        return render_template('add_drug.html', name=session['name'], output = output)
     # if not redirect to the login page
     return redirect(url_for('pharma_login'))
 
