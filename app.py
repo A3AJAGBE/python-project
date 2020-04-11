@@ -242,6 +242,23 @@ def pharma_view_drug():
     # if not redirect to the login page
     return redirect(url_for('pharma_login'))
 
+@app.route('/pharma_search', methods=['GET', 'POST'])
+def pharma_search():
+    # verify if the Pharmaceutical Company is logged in
+    if 'loggedin' in session:
+        output = ' '
+        if request.method == 'POST':
+            search = request.form['search']
+
+            mycursor = link.cursor()
+            mycursor.execute('SELECT DrugId, Name, Uses, SideEffect FROM Drugs WHERE Name LIKE %s AND P_Id IN (SELECT P_Id FROM Pharmaceuticals WHERE Name= %s)', ('%' + search + '%', session['name']))
+            pharmaDrug = mycursor.fetchall()
+            # redirect Pharmaceutical Company to dashboard
+            return render_template('pharma_search.html', name=session['name'], pharmaDrug = pharmaDrug)
+    # if not redirect to the login page
+    return redirect(url_for('pharma_login'))
+
+
 @app.route('/pharma_logout')
 def pharma_logout():
     # Remove session data, this will log the user out
