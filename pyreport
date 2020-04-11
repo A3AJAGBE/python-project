@@ -62,7 +62,13 @@ support for secure cookies (client side sessions)
 WSGI 1.0 compliant.
 Unicode based
 
+What is flask
+Flask is a lightweight WSGI web application framework. 
+It is designed to make getting started quick and easy, with the ability to scale up to complex applications.
 
+why flask
+Flask provides the most flexibility in terms of customisation
+suitable for rapid development of web apps
  
 
 
