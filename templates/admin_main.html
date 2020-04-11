@@ -20,8 +20,8 @@
     <h1><img src="/static/images/favicon32.png" alt="logo"> DrugInfoSys: Administrator</h1>
   </header>
 
-  <main class="loginMain">
-    <form id="reg" class="login" action=" " method="POST" autocomplete="off">
+  <main class="loginMain short">
+    <form id="reg" class="login color" action=" " method="POST" autocomplete="off">
 
       <h2>Login Form</h2>
       <hr>
@@ -32,7 +32,7 @@
       <label for="password"><i class="fas fa-lock black"></i> Password: </label>
       <input type="password" name="password" value="{{request.form.password}}">
 
-      <p>If you don't have access, fill the contact us form </p>
+      <p>If you don't have access, <a href="{{ url_for('contact') }}">Contact Us</a> </p>
       <h4 class="black">{{ output }}</h4>
 
       <button type="submit">LOGIN</button>
@@ -42,9 +42,10 @@
 
   <!-- FOOTER SECTION -->
   <footer>
-    <h3>DrugInfoSys @ 2020. <span><a href="{{ url_for('contact') }}">Contact Us</a></span></h3>
+    <h3>DrugInfoSys @ 2020. <span>No functionality with screen below 1000px</span></h3>
   </footer>
 
+  <!-- SCRIPTS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
   <script src="/static/script.js" charset="utf-8"></script>
