@@ -20,9 +20,9 @@
 
     <h1><img src="/static/images/favicon32.png" alt="logo"> DrugInfoSys: Pharmaceutical Company</h1>
 
-    <form class="search" action="#">
-      <input type="text" name="search" placeholder="Search query" />
-      <button type="button"><i class="fas fa-search"></i></button>
+    <form class="search" action=" {{ url_for('pharma_search') }} " method="POST">
+      <input type="text" name="search" placeholder="Search by drug name" value="{{ request.form.search }}" />
+      <button type="submit"><i class="fas fa-search"></i></button>
     </form>
 
   </header> <!-- END OF HEADER SECTION -->
@@ -44,25 +44,25 @@
     <section class="dashboard">
       <h2>DASHBOARD: Welcome, {{ name }}</h2>
 
-        <form id="reg" class="login" action=" " method="POST" autocomplete="off">
+      <form id="reg" class="login plain" action=" " method="POST" autocomplete="off">
 
-          <h3 class="black">Add Drug made by your company</h3>
-          <hr>
+        <h3 class="black">Add Drug made by your company</h3>
+        <hr>
 
-          <label for="drug_name"><i class="fas fa-pills black"></i> Drug Name: </label>
-          <input type="text" name="drug_name" value="{{request.form.drug_name}}">
+        <label for="drug_name"><i class="fas fa-pills black"></i> Drug Name: </label>
+        <input type="text" name="drug_name" value="{{request.form.drug_name}}">
 
-          <label for="uses"><i class="fas fa-diagnoses black"></i> Uses: </label>
-          <input type="text" name="uses" value="{{request.form.uses}}">
+        <label for="uses"><i class="fas fa-diagnoses black"></i> Uses: </label>
+        <input type="text" name="uses" value="{{request.form.uses}}">
 
-          <label for="side_effect"><i class="fas fa-notes-medical black"></i> Side Effect: </label>
-          <textarea name="side_effect" rows="3" value="{{request.form.side_effect}}"></textarea>
+        <label for="side_effect"><i class="fas fa-notes-medical black"></i> Side Effect: </label>
+        <textarea name="side_effect" rows="3" value="{{request.form.side_effect}}"></textarea>
 
-          <p>If No side effect, enter 'None' </p>
-          <h4 class="black">{{ output }}</h4>
+        <p>If No side effect, enter 'None' </p>
+        <h4 class="black">{{ output }}</h4>
 
-            <button type="submit">ADD DRUG</button>
-        </form>
+        <button type="submit">ADD DRUG</button>
+      </form>
 
     </section>
 
