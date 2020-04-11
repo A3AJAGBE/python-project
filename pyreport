@@ -92,6 +92,14 @@ The frontend is developed in html and backend is developed in database.
 the pharma data is developed in database.
 The connection between frontend and backed is flask.
 
+Why Python?
+Python is for logic.
+If loop, For loop, conditions, Expresssions, Functions...these all are designed in a logic.
+By thinking in the way of user perspective,
+how user uses the webpage
+which input is given
+by giving the input which output comes.
+
 
  
 
