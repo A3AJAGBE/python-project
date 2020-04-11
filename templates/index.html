@@ -22,9 +22,12 @@
       <!-- SEARCH SECTION -->
       <section class="content">
             <h2>Information at your finger tips</h2>
-            <i class="fas fa-search"></i>
-            <input type="text" name="search" placeholder="Search..." />
-            <button type="button">Search</button>
+
+            <form class="search" action=" {{ url_for('search') }} " method="POST">
+              <i class="fas fa-search"></i>
+              <input type="text" name="search" placeholder="Search by drug name, uses, side effect or pharma" value="{{ request.form.search }}" />
+              <button type="submit">Search</button>
+            </form>
       </section> <!-- END OF SEARCH SECTION -->
 
       <!-- FOOTER SECTION -->
