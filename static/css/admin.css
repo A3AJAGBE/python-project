@@ -29,14 +29,17 @@ h3 {
   margin: 0;
 }
 
-p {
-  margin: 5;
-}
-
 h4 {
   font-size: 1.3em;
   margin: 0;
 }
+
+p a{
+  text-decoration: none;
+  cursor: pointer;
+  color: #3F4145;
+}
+
 
 .black {
   color: black;
@@ -86,7 +89,7 @@ header{
 
 /* ASIDE SECTION STYLE */
 aside {
-  margin-top: 60px;
+  margin-top: 64px;
   background: #F6F8FA;
   width: 25vw;
   height: 100vh;
@@ -124,22 +127,38 @@ aside a:hover:not(.active) {
   padding-left: 15px;
 }
 
-/* SECTION STYLE FOR loginMain class IN admin_main.html */
+/* SECTION STYLE FOR FORMS */
 .loginMain {
   position: relative;
-  margin: 80px auto;
   width: 50vw;
-  height: 80vh;
   background: #8478E2;
   color: white;
   border-radius: 20px;
 }
 
+.short {
+  height: 57vh;
+  margin: 150px auto;
+}
+
+.long {
+  margin: 64px auto;
+  height: 87vh;
+}
+
 .login {
   position: absolute;
-  margin: 20px;
   float: left;
 }
+
+.plain {
+  margin: 20px 20px 20px 0;
+}
+
+.color {
+  margin: 20px;
+}
+
 .login label {
   display: inline-block;
   width: 100%;
@@ -182,10 +201,8 @@ button:hover {
   opacity:1;
 }
 
-p a{
-  text-decoration: none;
-  cursor: pointer;
-  color: #3F4145;
+.loginMain .error {
+  color: black;
 }
 
 .error {
@@ -193,6 +210,8 @@ p a{
   margin-bottom: 8px;
 }
 
+
+/* TABLE STYLE */
 .pDrug {
   width: 95%;
   border-collapse: collapse;
@@ -229,4 +248,15 @@ footer span a{
   text-decoration: none;
   cursor: pointer;
   color: #8478E2;
+}
+
+/* HIDE SOME ELEMENT IN SCREEN WITH 1000PX */
+@media screen and (max-width: 1000px) {
+  .loginMain {
+    display: none;
+  }
+
+  footer span {
+    float: left;
+  }
 }
