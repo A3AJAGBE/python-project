@@ -24,6 +24,12 @@ h2, h3 {
   clear: both;
 }
 
+a{
+  text-decoration: none;
+  cursor: pointer;
+  color: #8478E2;
+}
+
 /* MAIN SECTION STYLE */
 main {
   position: relative;
@@ -88,6 +94,27 @@ button:hover {
 }
 
 
+/* TABLE STYLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th {
+  background: #8478E2;
+}
+table td{
+  background: #3F4145;
+}
+
+table td, th {
+  border: 1px solid black;
+  padding: 10px;
+  color:  white;
+  text-align: left;
+}
+
+
 /* FOOTER SECTION STYLE */
 footer {
   padding: 0 20px;
@@ -117,5 +144,14 @@ footer span a{
 
   .content {
     width: 60%;
+  }
+
+  table {
+    width: 100%;
+    font-size: 1.4em;
+  }
+
+  .search{
+    width: 90%;
   }
 }
