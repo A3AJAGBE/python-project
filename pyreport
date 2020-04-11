@@ -53,6 +53,27 @@ Manufacturer name or can even search through symptoms.
 -Editing,adding , updating and deleting of data made easier.
 -User friendly, easy to interact with the system.
 
+
+
+What is flask?
+Flask is a lightweight WSGI web application framework. 
+It is designed to make getting started quick and easy, with the ability to scale up to complex applications.
+
+why flask?
+Flask provides the most flexibility in terms of customisation
+suitable for rapid development of web apps
+
+Is flask a frontend or backend?
+Flask is “Back End” as well as Django.
+If you need arguments to convince him: -
+Every single feature of Flask is supposed to be running on the server context.
+Front End technologies are those who run mostly in the browser context
+
+What is the flask used for?
+Flask is a popular Python web framework, meaning it is a third-party Python library used for developing web applications.
+Flask is a lightweight web frame of Python. 
+It provides the user with libraries, modules and tools to help build Web-Applications such as a blog or wiki
+
 FEATURES of FLASK:
 built-in development server and fast debugger.
 integrated support for unit testing.
@@ -62,13 +83,9 @@ support for secure cookies (client side sessions)
 WSGI 1.0 compliant.
 Unicode based
 
-What is flask
-Flask is a lightweight WSGI web application framework. 
-It is designed to make getting started quick and easy, with the ability to scale up to complex applications.
-
-why flask
-Flask provides the most flexibility in terms of customisation
-suitable for rapid development of web apps
+work:
+Flask is the prototype used to create instances of web application or web applications if you want to put it simple.
+So, once we import Flask, we need to create an instance of the Flask class for our web app.
  
 
 
