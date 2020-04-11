@@ -21,11 +21,9 @@
     <h1><img src="/static/images/favicon32.png" alt="logo"> DrugInfoSys: Pharmaceutical Company</h1>
 
     <form class="search" action=" {{ url_for('pharma_search') }} " method="POST">
-      <input type="text" name="search" placeholder="Search query" value="{{ request.form.search }}" />
+      <input type="text" name="search" placeholder="Search by drug name" value="{{ request.form.search }}" />
       <button type="submit"><i class="fas fa-search"></i></button>
     </form>
-
-</form>
 
   </header> <!-- END OF HEADER SECTION -->
 
@@ -55,14 +53,12 @@
           <li>Search for drug(s) made by your company using any name character </li>
 
         </ul>
-        <p>Ensure all data inserted to the database is correct, Thank you. <br> Always remember to Logout. </p>
+        <p>Ensure all data inserted to the database is correct and Always remember to Logout, Thank you. </p>
       </div>
     </section>
 
   </main> <!-- END OF MAIN SECTION -->
 
-  <!-- SCRIPTS -->
-  <script src="/static/script.js" charset="utf-8"></script>
 </body>
 
 </html>
