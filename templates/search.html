@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>DrugInfoSys</title>
+    <meta name="description" content="Drug Information System, drugs, information system">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Fira+Code:500|Roboto+Mono&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/65a82e1708.js"></script>
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
+  </head>
+  <body>
+    <!-- MAIN SECTION -->
+    <main>
+      <!-- HEADER SECTION -->
+      <header>
+        <h1><img src="/static/images/favicon32.png" alt="logo"> DrugInfoSys</h1>
+      </header> <!-- END OF HEADER SECTION -->
+
+      <!-- SEARCH SECTION -->
+      <section class="content">
+
+        <h2 class="black">Search Result for: {{ request.form['search'] }}</h2>
+
+        <table>
+          <tr>
+            <th>Drug Name</th>
+            <th>Uses</th>
+            <th>Side Effect</th>
+            <th>Pharmaceutical Company</th>
+          </tr>
+
+          {% for drug in result %}
+          <tr>
+            <td>{{ drug[0] }}</td>
+            <td>{{ drug[1] }}</td>
+            <td>{{ drug[2] }}</td>
+            <td>{{ drug[3] }}</td>
+          </tr>
+          {% endfor %}
+        </table> <br><br>
+
+      <a href="{{ url_for('home') }}"><i class="fas fa-chevron-circle-left"></i> BACK </a>
+
+      </section> <!-- END OF SEARCH SECTION -->
+
+      <!-- FOOTER SECTION -->
+      <footer>
+        <h3>DrugInfoSys @ 2020. <span><a href="#">About</a></span> </h3>
+      </footer> <!-- END OF FOOTER SECTION -->
+
+    </main> <!-- END OF MAIN SECTION -->
+  </body>
+</html>
