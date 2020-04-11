@@ -20,9 +20,9 @@
 
     <h1><img src="/static/images/favicon32.png" alt="logo"> DrugInfoSys: Pharmaceutical Company</h1>
 
-    <form class="search" action="#">
-      <input type="text" name="search" placeholder="Search query" />
-      <button type="button"><i class="fas fa-search"></i></button>
+    <form class="search" action=" {{ url_for('pharma_search') }} " method="POST">
+      <input type="text" name="search" placeholder="Search by drug name" value="{{ request.form.search }}" />
+      <button type="submit"><i class="fas fa-search"></i></button>
     </form>
 
   </header> <!-- END OF HEADER SECTION -->
@@ -44,36 +44,30 @@
     <section class="dashboard">
       <h2>DASHBOARD: Welcome, {{ name }}</h2>
       <hr>
-        <h3 class="black">View Drugs made by your company</h3>
+      <h3 class="black">View Drugs made by your company</h3>
 
+      <table class="pDrug">
+        <tr>
+          <th>ID</th>
+          <th>Drug Name</th>
+          <th>Uses</th>
+          <th>Side Effect</th>
+        </tr>
 
-
-        <table class="pDrug">
-          <tr>
-            <th>ID</th>
-            <th>Drug Name</th>
-            <th>Uses</th>
-            <th>Side Effect</th>
-          </tr>
-
-          {% for drug in pharmaDrug %}
-          <tr>
-            <td>{{ drug[0] }}</td>
-            <td>{{ drug[1] }}</td>
-            <td>{{ drug[2] }}</td>
-            <td>{{ drug[3] }}</td>
-          </tr>
-          {% endfor %}
-        </table>
+        {% for drug in pharmaDrug %}
+        <tr>
+          <td>{{ drug[0] }}</td>
+          <td>{{ drug[1] }}</td>
+          <td>{{ drug[2] }}</td>
+          <td>{{ drug[3] }}</td>
+        </tr>
+        {% endfor %}
+      </table>
 
     </section>
 
   </main> <!-- END OF MAIN SECTION -->
 
-  <!-- SCRIPTS -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
-  <script src="/static/script.js" charset="utf-8"></script>
 </body>
 
 </html>
