@@ -137,7 +137,7 @@ aside a:hover:not(.active) {
 
 .login {
   position: absolute;
-  margin: 20px 20px 20px 0px;
+  margin: 20px;
   float: left;
 }
 .login label {
@@ -193,6 +193,24 @@ p a{
   margin-bottom: 8px;
 }
 
+.pDrug {
+  width: 95%;
+  border-collapse: collapse;
+}
+
+.pDrug th {
+  text-align: left;
+  background: #8478E2;
+}
+.pDrug td{
+  background: #F6F8FA;
+}
+
+.pDrug td, .pDrug th {
+  border: 1px solid #3F4145;
+  padding: 10px;
+  color: black;
+}
 
 /* FOOTER SECTION STYLE */
 footer{
