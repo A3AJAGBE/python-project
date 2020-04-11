@@ -233,8 +233,12 @@ def add_drug():
 def pharma_view_drug():
     # verify if the Pharmaceutical Company is logged in
     if 'loggedin' in session:
+
+        mycursor = link.cursor()
+        mycursor.execute('SELECT DrugId, Name, Uses, SideEffect FROM Drugs WHERE P_Id IN (SELECT P_Id FROM Pharmaceuticals WHERE Name= %s)', (session['name'],))
+        pharmaDrug = mycursor.fetchall()
         # redirect Pharmaceutical Company to dashboard
-        return render_template('pharma_view_drug.html', name=session['name'])
+        return render_template('pharma_view_drug.html', name=session['name'], pharmaDrug = pharmaDrug)
     # if not redirect to the login page
     return redirect(url_for('pharma_login'))
 
