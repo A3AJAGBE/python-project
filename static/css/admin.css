@@ -30,7 +30,7 @@ h3 {
 }
 
 p {
-  margin: 0;
+  margin: 5;
 }
 
 h4 {
@@ -137,7 +137,7 @@ aside a:hover:not(.active) {
 
 .login {
   position: absolute;
-  margin: 20px;
+  margin: 20px 20px 20px 0px;
   float: left;
 }
 .login label {
@@ -145,7 +145,7 @@ aside a:hover:not(.active) {
   width: 100%;
 }
 
-.login input[type=text], input[type=email], input[type=password] {
+.login input[type=text], input[type=email], input[type=password], textarea {
   width: 100%;
   padding: 15px;
   margin: 5px 0 20px 0;
@@ -154,8 +154,12 @@ aside a:hover:not(.active) {
   background: #F6F8FA;
 }
 
-.login input[type=text]:focus,input[type=email]:focus, input[type=password]:focus {
+input:focus, textarea:focus {
   outline: none;
+}
+
+textarea{
+  resize: none;
 }
 
 hr {
@@ -185,7 +189,7 @@ p a{
 }
 
 .error {
-  color: black;
+  color: red;
   margin-bottom: 8px;
 }
 
