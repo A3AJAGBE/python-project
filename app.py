@@ -28,6 +28,19 @@ link = mysql.connector.connect(**config)
 def home():
     return render_template('index.html')
 
+#This will allow users search for drugs using name, uses, side effect, and Pharmaceutical name
+@app.route('/search', methods=['GET', 'POST'])
+def search():
+    if request.method == 'POST':
+        search = request.form['search']
+
+        #mysql query to retrieve data from the database for search functionality
+        mycursor = link.cursor()
+        mycursor.execute('SELECT D.Name, D.Uses, D.SideEffect, P.Name FROM Pharmaceuticals P INNER JOIN Drugs D ON P.P_Id = D.P_Id WHERE D.Name LIKE %s OR D.Uses Like %s OR D.SideEffect LIKE %s OR P.Name LIKE %s', ('%' + search + '%', '%' + search + '%', '%' + search + '%', '%' + search + '%'))
+        result = mycursor.fetchall()
+
+        # redirect user to the result page
+        return render_template('search.html', result = result)
 
 """ This is the start of Administrator route """
 #This is to display the dashboard page of the website.
