@@ -20,9 +20,9 @@
 
     <h1><img src="/static/images/favicon32.png" alt="logo"> DrugInfoSys: Administrator</h1>
 
-    <form class="search" action="#">
-      <input type="text" name="search" placeholder="Search query" />
-      <button type="button"><i class="fas fa-search"></i></button>
+    <form class="search" action=" {{ url_for('admin_search') }} " method="POST">
+      <input type="text" name="search" placeholder="Search by drug name and uses" value="{{ request.form.search }}" />
+      <button type="submit"><i class="fas fa-search"></i></button>
     </form>
 
   </header> <!-- END OF HEADER SECTION -->
@@ -34,31 +34,34 @@
     <!-- ASIDE -->
     <aside id="nav">
       <a class="nav active" href="{{ url_for('dashboard') }}"><i class="fas fa-home"></i> Home</a>
+      <a class="nav" href="{{ url_for('admin_profile') }}"><i class="fas fa-user-circle"></i> Profile</a>
       <a class="nav" href="{{ url_for('admin_register') }}"><i class="fas fa-user-cog"></i> Provide Access</a>
-      <a class="nav" href="#"><i class="fas fa-bell"></i> Notification</a>
-      <a class="nav" href="#"><i class="fas fa-notes-medical"></i> Pharma</a>
-      <a class="nav" href="#"><i class="fas fa-capsules"></i> Drugs</a>
+      <a class="nav" href="{{ url_for('access_notice') }}"><i class="fas fa-bell"></i> Access Request</a>
+      <a class="nav" href="{{ url_for('view_pharma') }}"><i class="fas fa-notes-medical"></i> Pharma</a>
+      <a class="nav" href="{{ url_for('view_drugs') }}"><i class="fas fa-capsules"></i> Drugs</a>
       <a class="nav" href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i> Logout</a>
     </aside> <!-- END ASIDE -->
 
     <section class="dashboard">
-      <h2>DASHBOARD: Welcome, {{ username }}!</h2>
+      <h2>DASHBOARD: Welcome, {{ username }}</h2>
       <hr>
-      <p class="black">
-        <h3>Things you can do from this page</h3>
+      <div class="black">
+        <h2>Things you can do from this page</h2>
         <ul>
+          <li>View your profile</li>
           <li>Register new Administrator for login access</li>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li>View new Administrator requesting access</li>
+          <li>View registered Pharmaceutical Company</li>
+          <li>View drugs in the database</li>
+
         </ul>
 
-      </p>
+        <p>Ensure all data inserted to the database is correct and Always remember to Logout, Thank you. </p>
+      </div>
     </section>
 
   </main> <!-- END OF MAIN SECTION -->
 
-  <script src="/static/script.js" charset="utf-8"></script>
 </body>
 
 </html>
