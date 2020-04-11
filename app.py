@@ -189,8 +189,13 @@ def pharma_dashboard():
 def pharma_profile():
     # verify if the Pharmaceutical Company is logged in
     if 'loggedin' in session:
+
+        mycursor = link.cursor()
+        mycursor.execute('SELECT Name, Location FROM Pharmaceuticals WHERE Name = %s', (session['name'],))
+        profile = mycursor.fetchone()
+
         # redirect Pharmaceutical Company to dashboard
-        return render_template('pharma_profile.html', name=session['name'])
+        return render_template('pharma_profile.html', profile = profile)
     # if not redirect to the login page
     return redirect(url_for('pharma_login'))
 
