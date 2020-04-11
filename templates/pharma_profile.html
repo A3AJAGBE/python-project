@@ -42,12 +42,14 @@
     </aside> <!-- END ASIDE -->
 
     <section class="dashboard">
-      <h2>DASHBOARD: Welcome, {{ name }}</h2>
+      <h2>Account Information</h2>
       <hr>
-      <div class="black">
-        <h3>Account Information</h3>
 
-      
+      <div class="black">
+
+        <h3> Company Name: {{ profile['Name'] }} </h3> <br>
+        <h3> Location: {{ profile['Location'] }} </h3>
+
       </div>
     </section>
 
