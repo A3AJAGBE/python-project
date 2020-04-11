@@ -44,11 +44,28 @@
     <section class="dashboard">
       <h2>DASHBOARD: Welcome, {{ name }}</h2>
       <hr>
-      <div class="black">
-        <h3>View Drugs made by your company</h3>
+        <h3 class="black">View Drugs made by your company</h3>
 
 
-      </div>
+
+        <table class="pDrug">
+          <tr>
+            <th>ID</th>
+            <th>Drug Name</th>
+            <th>Uses</th>
+            <th>Side Effect</th>
+          </tr>
+
+          {% for drug in pharmaDrug %}
+          <tr>
+            <td>{{ drug[0] }}</td>
+            <td>{{ drug[1] }}</td>
+            <td>{{ drug[2] }}</td>
+            <td>{{ drug[3] }}</td>
+          </tr>
+          {% endfor %}
+        </table>
+
     </section>
 
   </main> <!-- END OF MAIN SECTION -->
