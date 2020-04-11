@@ -20,33 +20,35 @@
 
     <h1><img src="/static/images/favicon32.png" alt="logo"> DrugInfoSys: Administrator</h1>
 
-    <form class="search" action="#">
-      <input type="text" name="search" placeholder="Search query" />
-      <button type="button"><i class="fas fa-search"></i></button>
+    <form class="search" action=" {{ url_for('admin_search') }} " method="POST">
+      <input type="text" name="search" placeholder="Search by drug name and uses" value="{{ request.form.search }}" />
+      <button type="submit"><i class="fas fa-search"></i></button>
     </form>
 
   </header> <!-- END OF HEADER SECTION -->
 
   <div class="class=" clearfix""></div>
+
   <!-- MAIN SECTION -->
   <main>
 
     <!-- ASIDE -->
     <aside id="nav">
       <a class="nav" href="{{ url_for('dashboard') }}"><i class="fas fa-home"></i> Home</a>
+      <a class="nav" href="{{ url_for('admin_profile') }}"><i class="fas fa-user-circle"></i> Profile</a>
       <a class="nav active" href="{{ url_for('admin_register') }}"><i class="fas fa-user-cog"></i> Provide Access</a>
-      <a class="nav" href="#"><i class="fas fa-bell"></i> Notification</a>
-      <a class="nav" href="#"><i class="fas fa-notes-medical"></i> Pharma</a>
-      <a class="nav" href="#"><i class="fas fa-capsules"></i> Drug</a>
+      <a class="nav" href="{{ url_for('access_notice') }}"><i class="fas fa-bell"></i> Access Request</a>
+      <a class="nav" href="{{ url_for('view_pharma') }}"><i class="fas fa-notes-medical"></i> Pharma</a>
+      <a class="nav" href="{{ url_for('view_drugs') }}"><i class="fas fa-capsules"></i> Drugs</a>
       <a class="nav" href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i> Logout</a>
     </aside> <!-- END ASIDE -->
 
     <section class="dashboard">
-      <h2>DASHBOARD: Welcome, {{ username }}!</h2>
+      <h2>DASHBOARD: Welcome, {{ username }}</h2>
 
-      <form id="reg" class="login" action=" " method="POST" autocomplete="off">
+      <form id="reg" class="login plain" action=" " method="POST" autocomplete="off">
 
-        <h2>Register Form</h2>
+        <h3>Register Form</h3>
         <hr>
 
         <label for="name"><i class="fas fa-user black"></i> Name: </label>
@@ -65,7 +67,6 @@
         <h4 class="black">{{ output }}</h4>
 
         <button type="submit">REGISTER</button>
-
       </form>
 
     </section>
