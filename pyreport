@@ -86,6 +86,13 @@ Unicode based
 work:
 Flask is the prototype used to create instances of web application or web applications if you want to put it simple.
 So, once we import Flask, we need to create an instance of the Flask class for our web app.
+
+overview of project:
+The frontend is developed in html and backend is developed in database.
+the pharma data is developed in database.
+The connection between frontend and backed is flask.
+
+
  
 
 
