@@ -21,13 +21,29 @@
 
       <!-- SEARCH SECTION -->
       <section class="content">
-            <h2>Information at your finger tips</h2>
-            <p>Search by drug name, uses, side effect or pharma</p>
-            <form class="search" action=" {{ url_for('search') }} " method="POST">
-              <i class="fas fa-search"></i>
-              <input type="text" name="search" placeholder="Search query .... " value="{{ request.form.search }}" />
-              <button type="submit">Search</button>
-            </form>
+
+        <h2 class="black">Search Result for: {{ request.form['search'] }}</h2>
+
+        <table>
+          <tr>
+            <th>Drug Name</th>
+            <th>Uses</th>
+            <th>Side Effect</th>
+            <th>Pharmaceutical Company</th>
+          </tr>
+
+          {% for drug in result %}
+          <tr>
+            <td>{{ drug[0] }}</td>
+            <td>{{ drug[1] }}</td>
+            <td>{{ drug[2] }}</td>
+            <td>{{ drug[3] }}</td>
+          </tr>
+          {% endfor %}
+        </table> <br><br>
+
+      <a href="{{ url_for('home') }}"><i class="fas fa-chevron-circle-left"></i> BACK </a>
+
       </section> <!-- END OF SEARCH SECTION -->
 
       <!-- FOOTER SECTION -->

@@ -1,0 +1,262 @@
+/* GENERAL STYLE FOR THE WEBSITE */
+* {
+  -moz-box-sizing: border-box; /* Firexfox */
+  -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box; /* IE */
+}
+
+body {
+	background: #DAE0EA;
+  color: #7A7C87;
+  font-family: 'Roboto Mono', monospace, Helvetica;
+  font-size: 1.1em;
+}
+
+h1 {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 2.2em;
+  margin: 0;
+}
+
+h2{
+  font-family: 'Fira Code';
+  font-size: 1.8em;
+  margin: 0;
+}
+h3 {
+  font-family: 'Fira Code';
+  font-size: 1.5em;
+  margin: 0;
+}
+
+h4 {
+  font-size: 1.3em;
+  margin: 0;
+}
+
+p a{
+  text-decoration: none;
+  cursor: pointer;
+  color: #3F4145;
+}
+
+
+.black {
+  color: black;
+}
+
+.clearfix {
+  clear: both;
+}
+
+
+/* HEADER SECTION STYLE */
+header{
+  padding: 10px 20px;
+  background: #F6F8FA;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.search {
+  float: right;
+  padding: 8px;
+  margin-right: 15px;
+  font-size: 1.3em;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.search input[type=text]{
+  height: 40px;
+  color: #3F4145;
+  padding: 10px;
+  width: 30vw;
+}
+
+.search button {
+  background: #8478E2;
+  color: #3F4145;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  padding: 7px;
+  border: none;
+  float: right;
+}
+
+/* ASIDE SECTION STYLE */
+aside {
+  margin-top: 64px;
+  background: #F6F8FA;
+  width: 25vw;
+  height: 100vh;
+  float: left;
+  border-top: 2px solid #3F4145;
+  position: fixed;
+}
+
+aside a {
+  display: block;
+  background: #8478E2;
+  color: black;
+  padding: 16px;
+  font-size: 1.3em;
+  text-decoration: none;
+  border-bottom: 2px solid #3F4145;
+}
+
+aside a.active {
+  background-color: #F6F8FA;
+  color: #8478E2;
+}
+
+aside a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+
+/* DASHBOARD SECTION STYLE */
+.dashboard {
+  margin-top: 70px;
+  width: 75vw;
+  float: right;
+  padding-left: 15px;
+}
+
+/* SECTION STYLE FOR FORMS */
+.loginMain {
+  position: relative;
+  width: 50vw;
+  background: #8478E2;
+  color: white;
+  border-radius: 20px;
+}
+
+.short {
+  height: 57vh;
+  margin: 150px auto;
+}
+
+.long {
+  margin: 64px auto;
+  height: 87vh;
+}
+
+.login {
+  position: absolute;
+  float: left;
+}
+
+.plain {
+  margin: 20px 20px 20px 0;
+}
+
+.color {
+  margin: 20px;
+}
+
+.login label {
+  display: inline-block;
+  width: 100%;
+}
+
+.login input[type=text], input[type=email], input[type=password], textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 20px 0;
+  display: inline-block;
+  border: none;
+  background: #F6F8FA;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+}
+
+textarea{
+  resize: none;
+}
+
+hr {
+  border: 1px solid #F6F8FA;
+  margin-bottom: 25px;
+}
+
+.login button {
+  background: #3F4145;
+  color: #8478E2;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.5;
+}
+
+button:hover {
+  opacity:1;
+}
+
+.loginMain .error {
+  color: black;
+}
+
+.error {
+  color: red;
+  margin-bottom: 8px;
+}
+
+
+/* TABLE STYLE */
+.pDrug {
+  width: 95%;
+  border-collapse: collapse;
+}
+
+.pDrug th {
+  text-align: left;
+  background: #8478E2;
+}
+.pDrug td{
+  background: #F6F8FA;
+}
+
+.pDrug td, .pDrug th {
+  border: 1px solid #3F4145;
+  padding: 10px;
+  color: black;
+}
+
+/* FOOTER SECTION STYLE */
+footer{
+  padding: 10px 20px;
+  background: #F6F8FA;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer span {
+  float: right;
+}
+
+footer span a{
+  text-decoration: none;
+  cursor: pointer;
+  color: #8478E2;
+}
+
+/* HIDE SOME ELEMENT IN SCREEN WITH 1000PX */
+@media screen and (max-width: 1000px) {
+  .loginMain {
+    display: none;
+  }
+
+  footer span {
+    float: left;
+  }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>DrugInfoSys: Administrator</title>
+  <meta name="description" content="Drug Information System, drugs, information system">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/css/normalize.css">
+  <link rel="stylesheet" href="/static/css/admin.css">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Fira+Code:500|Roboto+Mono&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/65a82e1708.js"></script>
+  <link rel="shortcut icon" href="/static/images/favicon.ico">
+</head>
+
+<body>
+
+  <!-- HEADER SECTION -->
+  <header>
+    <h1><img src="/static/images/favicon32.png" alt="logo"> DrugInfoSys: Administrator</h1>
+  </header>
+
+  <main class="loginMain long">
+    <form id="reg" class="login color" action=" " method="POST" autocomplete="off">
+
+      <h2>Contact Us</h2>
+      <hr>
+
+      <label for="name"><i class="fas fa-user black"></i> Name: </label>
+      <input type="text" name="name" value="{{request.form.name}}">
+
+      <label for="username"><i class="fas fa-user black"></i> Username: </label>
+      <input type="text" name="username" value="{{request.form.username}}">
+
+      <label for="email"><i class="fas fa-envelope black"></i> Email: </label>
+      <input type="email" name="email" value="{{request.form.email}}">
+
+      <p>If you have access, <a href="{{ url_for('admin_main') }}">Login</a></p>
+      <h4 class="black">{{ output }}</h4>
+      
+      <button type="submit">SUBMIT</button>
+
+    </form>
+
+  </main>
+
+  <!-- FOOTER SECTION -->
+  <footer>
+    <h3>DrugInfoSys @ 2020. <span>No functionality with screen below 1000px</span></h3>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+  <script src="/static/script.js" charset="utf-8"></script>
+
+</body>
+
+</html>
