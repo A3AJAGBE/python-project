@@ -21,18 +21,25 @@
 
       <!-- SEARCH SECTION -->
       <section class="content">
-            <h2>Information at your finger tips</h2>
-            <p>Search by drug name, uses, side effect or pharma</p>
-            <form class="search" action=" {{ url_for('search') }} " method="POST">
-              <i class="fas fa-search"></i>
-              <input type="text" name="search" placeholder="Search query .... " value="{{ request.form.search }}" />
-              <button type="submit">Search</button>
-            </form>
+
+      <h2> DrugInfoSys is Developed and Designed to complete Programming for Information Systems class project, done using
+        Flask (Python), MySql, HTML, CSS, JavaScript and jQuery. </h2>
+
+      <h2> This project is a search engine for users to get real information about drugs (medication) straight from the
+        pharmaceutical company. The data will come from the company that made the medicine, while an administrator will
+         monitor the data and system. </h2>
+
+      <h2> This system and the report attached is completed by Aminat Ajagbe (10541380), Saikrishna Sattayya Dumpala
+        (10540452), and Venkata Hanuma Sai Krishna Pothineni (10539362) students of Dublin Business School, studying MSc.
+         Information Systems with computing.  </h2>
+
+      <a href="{{ url_for('home') }}"><i class="fas fa-chevron-circle-left"></i> BACK </a>
+
       </section> <!-- END OF SEARCH SECTION -->
 
       <!-- FOOTER SECTION -->
       <footer>
-        <h3>DrugInfoSys @ 2020. <span><a href=" {{ url_for('about') }} ">About</a></span> </h3>
+        <h3>DrugInfoSys @ 2020. <span><a href="#">About</a></span> </h3>
       </footer> <!-- END OF FOOTER SECTION -->
 
     </main> <!-- END OF MAIN SECTION -->
