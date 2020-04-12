@@ -28,6 +28,12 @@ link = mysql.connector.connect(**config)
 def home():
     return render_template('index.html')
 
+#This is to display the users about page of the website.
+@app.route('/about', methods=['GET', 'POST'])
+def about():
+    return render_template('about.html')
+
+
 #This will allow users search for drugs using name, uses, side effect, and Pharmaceutical name
 @app.route('/search', methods=['GET', 'POST'])
 def search():
