@@ -12,12 +12,14 @@ body {
 }
 
 h1 {
-font-family: 'Abril Fatface', cursive;
-margin: 0;
+  font-family: 'Abril Fatface', cursive;
+  margin: 0;
+  font-size: 1.5em;
 }
 
 h2, h3 {
   font-family: 'Fira Code';
+  font-size: 1.2em;
 }
 
 .clearfix {
@@ -35,7 +37,7 @@ main {
   position: relative;
   margin: 30px auto;
   width: 95%;
-  height: 90vh;
+  height: 100vh;
   background: white;
   border-radius: 10px;
 }
@@ -69,7 +71,7 @@ header{
 .content input[type=text]{
   width: 100%;
   height: 50px;
-  font-size: 1.5em;
+  font-size: 1.3em;
   border: 2px solid #A8A4C9;
   text-indent: 45px;
   border-radius: 10px;
@@ -96,7 +98,7 @@ button:hover {
 
 /* TABLE STYLE */
 table {
-  width: 100%;
+  width: 80%;
   border-collapse: collapse;
 }
 
@@ -136,22 +138,26 @@ footer span a{
 
 /* TABLET / DESKTOP STYLE */
 @media screen and (min-width: 768px) {
+  h1 {
+  font-size: 2.2em;
+  }
+
+  h2, h3 {
+    font-size: 1.5em;
+  }
 
   main {
     margin: 50px auto;
     width: 90%;
+    height: 90vh;
   }
 
   .content {
-    width: 60%;
+    width: 70%;
   }
 
   table {
     width: 100%;
-    font-size: 1.4em;
   }
 
-  .search{
-    width: 90%;
-  }
 }
