@@ -1,0 +1,106 @@
+Pyhton Report
+Drug Information systems
+
+
+Group Members:
+Aminat Ajagbe (10541380)
+Krishna Dumpala (10540452)
+Sai Pothineni (10539362)
+
+Lecturer: Paul Laird
+Course:
+Module Title:  Programming for Information Systems
+
+
+
+
+Introduction for (project name).
+
+The “project name” is built to help people and make their life easier in various ways related to their medication details,
+our project will help them resolve most of their doubts / queries related to any medicinal drug, information on not only
+about the drug but it can also give some important information about the makers/ manufacturers of the drug and their address. 
+Usually all the data is uploaded by or filed by the respective pharma companies, the main aim is to educate users about 
+the medicines which are available in the market today.
+
+There may be situations where a person may not be able to visit a Doctor for drug consultation for many reasons
+for e.g. the person may not have time to visit due to his/her tight schedule, didn't get a doctor's appointment
+etc.
+
+By sitting at home our users can search for any drug which is present in the market and can learn about it. 
+No formal knowledge is required for the user while using our system.Our project has a very simple UI for the 
+purpose of user friendliness of the page. The data which is present in  the database is provided by the many 
+pharma companies who actually manufacture those medicines. We take utmost care not to fill inappropriate data 
+into the database.
+
+Inside the database we can not only add or delete data/ information but can also create admin accounts where 
+an admin can be a representative of a pharma company who provides details to our project.Such admins have few 
+rights and cannot access full database. We as project managers have full rights and we can add or remove users 
+as per request.
+
+Objective of project.
+The main objective behind our project is to store and manage information about medicines, user accounts. 
+The project is built at administrative end level thus only the admins of the system have the rights to 
+change / modify the data. The purpose of the project is to give users a handy system which will help /serve them 
+access knowledge about medicinal drugs any time / on the go. The best part is the user does not need to have extra
+knowledge about the system on how to use it, it is a user friendly system.
+
+Functionalities.
+-Project provides a searching facility where a user can search through various medicines using Drug name ,
+Manufacturer name or can even search through symptoms.
+-Manages the information provided by pharma companies.
+-Displays the user’s queired medicine uses including side effects.
+-Manages user , admin information.
+-Editing,adding , updating and deleting of data made easier.
+-User friendly, easy to interact with the system.
+
+
+
+What is flask?
+Flask is a lightweight WSGI web application framework. 
+It is designed to make getting started quick and easy, with the ability to scale up to complex applications.
+
+why flask?
+Flask provides the most flexibility in terms of customisation
+suitable for rapid development of web apps
+
+Is flask a frontend or backend?
+Flask is “Back End” as well as Django.
+If you need arguments to convince him: -
+Every single feature of Flask is supposed to be running on the server context.
+Front End technologies are those who run mostly in the browser context
+
+What is the flask used for?
+Flask is a popular Python web framework, meaning it is a third-party Python library used for developing web applications.
+Flask is a lightweight web frame of Python. 
+It provides the user with libraries, modules and tools to help build Web-Applications such as a blog or wiki
+
+FEATURES of FLASK:
+built-in development server and fast debugger.
+integrated support for unit testing.
+RESTful request dispatching.
+Jinja2 templating.
+support for secure cookies (client side sessions)
+WSGI 1.0 compliant.
+Unicode based
+
+work:
+Flask is the prototype used to create instances of web application or web applications if you want to put it simple.
+So, once we import Flask, we need to create an instance of the Flask class for our web app.
+
+overview of project:
+The frontend is developed in html and backend is developed in database.
+the pharma data is developed in database.
+The connection between frontend and backed is flask.
+
+Why Python?
+Python is for logic.
+If loop, For loop, conditions, Expresssions, Functions...these all are designed in a logic.
+By thinking in the way of user perspective,
+how user uses the webpage
+which input is given
+by giving the input which output comes.
+
+
+ 
+
+
