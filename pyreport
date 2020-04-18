@@ -12,7 +12,17 @@ Course:
 Module Title:  Programming for Information Systems
 
 
-
+Abstract : 
+In this report we created a process using the knowledge we gained in this part of the course,
+the system is an online website which is also a data driven website which can be used by any 
+user there are no boundaries or limits on users to use our system. Our system is all about 
+getting details on any pharmacy drug using drug names , or health symptoms or can even search 
+through side effects online on the go. There are 4 major functions in our system that are search,
+sort, insert and update. But the functions are depended on what type of a user is using the 
+system. If a normal user is using the system only search and sort options are available, 
+but if an admin is using the system he / she can use all of the functions. The significant
+piece of this report will acquaint on how to use Python, Flask ,SQL to make a database table,
+Webpage UI and inside logic to deal with user demand 
 
 Introduction for (project name).
 
