@@ -111,6 +111,19 @@ which input is given
 by giving the input which output comes.
 
 
+
+This project report will introduce how to help people and make their life easier in various ways related to their medication 
+details by using python flask
+
+In this project report, we will demonstrate the details of using python flask to build on the major components of the system
+
+ method used:  the system is built using python flask web application framework  it is used because 
+ Flask provides the most flexibility in terms of customization and suitable for rapid development of web apps
+ 
+ limitation: The drug data system usually takes a while to check and verify the drug. Regardless of the 
+ implementation time constraint, the program may have some possible bugs or weaknesses. Those bugs or vulnerabilities can be patched, 
+ however, due to the simplicity and strong functionality of python flask.
+
  
 
 
