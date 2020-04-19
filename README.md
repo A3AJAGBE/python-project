@@ -1,4 +1,4 @@
-![alt text] (static/images/favicon.ico)
+![alt text] (images/favicon.ico)
 
 #DrugInfoSys
 
@@ -25,7 +25,7 @@ Krishna - Information Gathering for database and documentation
 
 ## Link
 
-This project is deployed on Microsoft and Azure
+This project is deployed on Microsoft Azure
 
 The main page is: https://druginfosystem.northcentralus.cloudapp.azure.com
 
