@@ -1,4 +1,4 @@
-![alt text] (images/favicon.ico)
+![DrugInfoSys Logo] (/static/images/favicon.ico)
 
 #DrugInfoSys
 
