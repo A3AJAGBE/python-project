@@ -1,4 +1,4 @@
-![DrugInfoSys Logo] (favicon.ico)
+![DrugInfoSys Logo](favicon.ico)
 
 # DrugInfoSys
 
