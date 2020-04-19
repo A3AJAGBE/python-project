@@ -381,6 +381,56 @@ def pharma_search():
     # if not redirect to the login page
     return redirect(url_for('pharma_login'))
 
+#This will allow Pharmaceutical to edit a drug
+@app.route('/pharma_edit/<int:drug_ID>', methods=['GET', 'POST'])
+def pharma_edit(drug_ID):
+    # verify if the Pharmaceutical is logged in
+    if 'loggedin' in session:
+
+            #mysql query
+            mycursor = link.cursor()
+            mycursor.execute('SELECT DrugId, Name, Uses, SideEffect FROM Drugs WHERE DrugId = %s AND P_Id IN (SELECT P_Id FROM Pharmaceuticals WHERE Name= %s)', (drug_ID, session['name']))
+            pharmaDrug = mycursor.fetchone()
+            return render_template('pharma_edit.html', name=session['name'], pharmaDrug = pharmaDrug)
+
+    # if not redirect to the login page
+    return redirect(url_for('pharma_login'))
+
+#This will allow Pharmaceutical to edit a drug
+@app.route('/pharma_update', methods=['GET', 'POST'])
+def pharma_update():
+    # verify if the Pharmaceutical is logged in
+    if 'loggedin' in session:
+        if request.method == 'POST':
+            drug_ID = request.form['drug_ID']
+            drug_name = request.form['drug_name']
+            uses = request.form['uses']
+            side_effect = request.form['side_effect']
+
+            #mysql query
+            mycursor = link.cursor()
+            mycursor.execute('UPDATE Drugs SET Name = %s, Uses = %s, SideEffect = %s WHERE DrugId = %s AND P_Id IN (SELECT P_Id FROM Pharmaceuticals WHERE Name= %s)', (drug_name, uses, side_effect, drug_ID, session['name']))
+            link.commit()
+            return redirect(url_for('pharma_view_drug'))
+
+    # if not redirect to the login page
+    return redirect(url_for('pharma_login'))
+
+#This will allow Pharmaceutical to delete a drug
+@app.route('/pharma_delete/<int:drug_ID>', methods=['GET', 'POST'])
+def pharma_delete(drug_ID):
+    # verify if the Pharmaceutical is logged in
+    if 'loggedin' in session:
+
+        #mysql query to retrieve data from the database for search functionality
+        mycursor = link.cursor()
+        mycursor.execute('DELETE FROM Drugs WHERE DrugId = %s AND P_Id IN (SELECT P_Id FROM Pharmaceuticals WHERE Name= %s)', (drug_ID, session['name']))
+        link.commit()
+        return redirect(url_for('pharma_view_drug'))
+
+    # if not redirect to the login page
+    return redirect(url_for('pharma_login'))
+
 #This will allow Pharmaceutical to logout of the access page
 @app.route('/pharma_logout')
 def pharma_logout():
