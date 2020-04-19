@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>DrugInfoSys: Pharma Company</title>
+  <meta name="description" content="Drug Information System, drugs, information system">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/css/normalize.css">
+  <link rel="stylesheet" href="/static/css/admin.css">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Fira+Code:500|Roboto+Mono&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/65a82e1708.js"></script>
+  <link rel="shortcut icon" href="/static/images/favicon.ico">
+</head>
+
+<body>
+
+  <!-- HEADER SECTION -->
+  <header>
+
+    <h1><img src="/static/images/favicon32.png" alt="logo"> DrugInfoSys: Pharmaceutical Company</h1>
+
+    <form class="search" action=" {{ url_for('pharma_search') }} " method="POST">
+      <input type="text" name="search" placeholder="Search by drug name" value="{{ request.form.search }}" />
+      <button type="submit"><i class="fas fa-search"></i></button>
+    </form>
+
+  </header> <!-- END OF HEADER SECTION -->
+
+  <div class="class=" clearfix""></div>
+
+  <!-- MAIN SECTION -->
+  <main>
+
+    <!-- ASIDE -->
+    <aside id="nav">
+      <a class="nav" href="{{ url_for('pharma_dashboard') }}"><i class="fas fa-home"></i> Home</a>
+      <a class="nav" href="{{ url_for('pharma_profile') }}"><i class="fas fa-clinic-medical black"></i> Profile</a>
+      <a class="nav" href="{{ url_for('add_drug') }}"><i class="fas fa-capsules"></i> Add Drug</a>
+      <a class="nav" href="{{ url_for('pharma_view_drug') }}"><i class="fas fa-capsules"></i> View Drugs</a>
+      <a class="nav" href="{{ url_for('pharma_logout') }}"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </aside> <!-- END ASIDE -->
+
+    <section class="dashboard">
+      <h2>DASHBOARD: Welcome, {{ name }}</h2>
+
+      <form id="reg" class="login plain" action="{{ url_for('pharma_update') }}" method="POST" autocomplete="off">
+
+        <h3 class="black">Edit Drug made by your company</h3>
+        <hr>
+
+        <label for="drug_name"><i class="fas fa-pills black"></i> New Drug Name: </label>
+        <input type="text" name="drug_name" value="{{ pharmaDrug[1] }} ">
+
+        <label for="uses"><i class="fas fa-diagnoses black"></i> New Uses: </label>
+        <input type="text" name="uses" value="{{ pharmaDrug[2] }}">
+
+        <label for="side_effect"><i class="fas fa-notes-medical black"></i> New Side Effect: </label>
+        <textarea name="side_effect" rows="3" value="{{ pharmaDrug[3] }}"></textarea>
+
+        <p>If No side effect, enter 'None' </p>
+        <h4 class="black">{{ output }}</h4>
+
+        <input type="hidden" name="drug_ID" value="{{ pharmaDrug[0] }}">
+        <button type="submit">UPDATE DRUG</button>
+      </form>
+
+    </section>
+
+  </main> <!-- END OF MAIN SECTION -->
+
+  <!-- SCRIPTS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+  <script src="/static/script.js" charset="utf-8"></script>
+</body>
+
+</html>
