@@ -1,6 +1,6 @@
-![DrugInfoSys Logo] (/static/images/favicon.ico)
+![DrugInfoSys Logo] (favicon.ico)
 
-#DrugInfoSys
+# DrugInfoSys
 
 DrugInfoSys is Developed and Designed using Flask (Python), MySql, HTML, CSS, JavaScript and jQuery.
 
