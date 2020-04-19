@@ -52,6 +52,7 @@
           <th>Drug Name</th>
           <th>Uses</th>
           <th>Side Effect</th>
+          <th>Action</th>
         </tr>
 
         {% for drug in pharmaDrug %}
@@ -60,6 +61,10 @@
           <td>{{ drug[1] }}</td>
           <td>{{ drug[2] }}</td>
           <td>{{ drug[3] }}</td>
+          <td>
+            <a href="/pharma_edit/{{ drug[0] }}">Edit</a>
+            <a href="/pharma_delete/{{ drug[0] }}">Delete</a>
+          </td>
         </tr>
         {% endfor %}
       </table>
