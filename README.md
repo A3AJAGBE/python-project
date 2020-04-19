@@ -1,7 +1,6 @@
-![DrugInfoSys Logo](favicon.ico)
+![DrugInfoSys Logo](favicon.ico)  
 
 # DrugInfoSys
-
 DrugInfoSys is Developed and Designed using Flask (Python), MySql, HTML, CSS, JavaScript and jQuery.
 
 ## About
@@ -24,7 +23,6 @@ Aminat - System Development and Design
 Krishna - Information Gathering for database and documentation
 
 ## Link
-
 This project is deployed on Microsoft Azure
 
 The main page is: https://druginfosystem.northcentralus.cloudapp.azure.com
