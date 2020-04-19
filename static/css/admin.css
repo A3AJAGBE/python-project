@@ -225,6 +225,16 @@ button:hover {
   background: #F6F8FA;
 }
 
+.pDrug a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #8478E2;
+}
+
+.pDrug a:hover {
+  color: #3F4145;
+}
+
 .pDrug td, .pDrug th {
   border: 1px solid #3F4145;
   padding: 10px;
